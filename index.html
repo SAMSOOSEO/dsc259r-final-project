@@ -7561,7 +7561,6 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Introduction"><strong>Introduction</strong><a class="anchor-link" href="#Introduction">¶</a></h3><p>This project conducts an open-ended investigation into the <strong>Major Power Outages</strong> dataset, which contains records of significant power outages in the United States from 2000 to 2016. Understanding the causes and consequences of these outages is critical for improving infrastructure resilience and public safety.</p>
-   <iframe src="assets/fig2.html" width="100%" height="500px" frameborder="0"></iframe> 
 <p>The primary focus of this project is to analyze how different environmental and operational factors—particularly <strong>Severe Weather</strong>—impact the restoration speed and overall severity of these events.</p>
 <p><strong>Primary Question:</strong> &gt; "Do power outages caused by Severe Weather last longer on average than those caused by other reasons?"</p>
 <h3 id="Dataset-Overview"><strong>Dataset Overview</strong><a class="anchor-link" href="#Dataset-Overview">¶</a></h3><p>The dataset contains <strong>1,534 rows</strong>, where each row represents a major power outage event. To answer the primary question and build a predictive model, the following columns are most relevant:</p>
@@ -7733,14 +7732,17 @@ a.anchor-link {
 <h3 id="2.-Most-Frequent-Causes-(Fig-2)"><strong>2. Most Frequent Causes (Fig 2)</strong><a class="anchor-link" href="#2.-Most-Frequent-Causes-(Fig-2)">¶</a></h3><ul>
 <li><strong>Observation</strong>: <strong>Severe Weather</strong> is identified as the leading cause of major power outages, with <strong>763 recorded events</strong>.</li>
 <li><strong>Insight</strong>: Given its high frequency and impact, analyzing weather-related outages is essential for understanding overall grid reliability and infrastructure resilience.</li>
+    <iframe src="assets/fig2.html" width="100%" height="500px" frameborder="0"></iframe>    
 </ul>
 <h3 id="3.-Duration-by-Cause-(Fig-3)"><strong>3. Duration by Cause (Fig 3)</strong><a class="anchor-link" href="#3.-Duration-by-Cause-(Fig-3)">¶</a></h3><ul>
 <li><strong>Observation</strong>: <code>Severe Weather</code> and <code>fuel supply emergency</code> exhibit significantly higher variability and longer durations.</li>
 <li><strong>Insight</strong>: Different causes have unique "time signatures." Weather-related events pose the greatest risk for long-term power loss, necessitating specialized restoration strategies.</li>
+    <iframe src="assets/fig3.html" width="100%" height="500px" frameborder="0"></iframe>
 </ul>
 <h3 id="4.-Deep-Dive:-Severe-Weather-Types-(Fig-4)"><strong>4. Deep Dive: Severe Weather Types (Fig 4)</strong><a class="anchor-link" href="#4.-Deep-Dive:-Severe-Weather-Types-(Fig-4)">¶</a></h3><ul>
 <li><strong>Observation</strong>: Within the 716 weather events, <strong>Hurricanes and Winter Storms</strong> result in significantly longer outages.</li>
 <li><strong>Insight</strong>: The specific <em>type</em> of meteorological event is a critical predictor for restoration time. This granular information will be a key feature in the predictive modeling phase.</li>
+    <iframe src="assets/fig4.html" width="100%" height="500px" frameborder="0"></iframe>
 </ul>
 </div>
 </div>
@@ -7836,6 +7838,7 @@ a.anchor-link {
 <li><strong>P-value</strong>: 0.0000</li>
 </ul>
 <p><strong>Conclusion</strong>: Since the P-value is 0.0000, the null hypothesis is rejected. This confirms that the missingness of outage duration is <strong>MAR (Missing at Random)</strong>, as it shows a strong dependency on the cause of the outage.</p>
+    <iframe src="assets/fig_missing.html" width="100%" height="500px" frameborder="0"></iframe>
 <h3 id="2.-Hierarchical-Imputation-Strategy"><strong>2. Hierarchical Imputation Strategy</strong><a class="anchor-link" href="#2.-Hierarchical-Imputation-Strategy">¶</a></h3><p>Since the missingness is confirmed as MAR, using a simple global mean would introduce bias. Instead, this process implements a <strong>Hierarchical Imputation</strong> strategy to preserve the distinct characteristics of each cause:</p>
 <ol>
 <li><strong>Level 1</strong>: Fill missing values using the <strong>median</strong> of the specific <code>CAUSE.CATEGORY.DETAIL</code>.</li>
@@ -8001,6 +8004,7 @@ P-value: 0.0000
 <li><strong>P-value</strong>: <strong>0.0000</strong></li>
 </ul>
 <h3 id="5.-Conclusion"><strong>5. Conclusion</strong><a class="anchor-link" href="#5.-Conclusion">¶</a></h3><p>Since the <strong>P-value is 0.0000</strong>, which is much lower than the significance level of 0.05, this project <strong>rejects the null hypothesis</strong>. There is strong statistical evidence that outages caused by <strong>Severe Weather</strong> result in significantly longer restoration times—averaging about 39 hours longer—than outages caused by other factors. This confirms that weather is a critical feature for predicting power grid recovery.</p>
+    <iframe src="assets/fig_hypothesis.html" width="100%" height="500px" frameborder="0"></iframe>
 </div>
 </div>
 </div>
