@@ -7519,7 +7519,8 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Analyzing the Severity and Causes of Major Power Outages in the U.S.</strong></p>
 <p><strong>Name(s)</strong>: Samsoo Seo</p>
-<p><strong>Website Link</strong>: <a href="https://github.com/SAMSOOSEO/dsc259r-final-project/">https://github.com/SAMSOOSEO/dsc259r-final-project/</a></p>
+<p><strong>Website Link</strong>: <a href="https://samsooseo.github.io/dsc259r-final-project/">https://samsooseo.github.io/dsc259r-final-project/</a></p>
+<hr/>
 </div>
 </div>
 </div>
@@ -7528,7 +7529,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -7559,7 +7560,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-1:-Introduction">Step 1: Introduction<a class="anchor-link" href="#Step-1:-Introduction">¶</a></h2><h3 id="Introduction"><strong>Introduction</strong><a class="anchor-link" href="#Introduction">¶</a></h3><p>This project conducts an open-ended investigation into the <strong>Major Power Outages</strong> dataset, which contains records of significant power outages in the United States from 2000 to 2016. Understanding the causes and consequences of these outages is critical for improving infrastructure resilience and public safety.</p>
+<h3 id="Introduction"><strong>Introduction</strong><a class="anchor-link" href="#Introduction">¶</a></h3><p>This project conducts an open-ended investigation into the <strong>Major Power Outages</strong> dataset, which contains records of significant power outages in the United States from 2000 to 2016. Understanding the causes and consequences of these outages is critical for improving infrastructure resilience and public safety.</p>
 <p>The primary focus of this project is to analyze how different environmental and operational factors—particularly <strong>Severe Weather</strong>—impact the restoration speed and overall severity of these events.</p>
 <p><strong>Primary Question:</strong> &gt; "Do power outages caused by Severe Weather last longer on average than those caused by other reasons?"</p>
 <h3 id="Dataset-Overview"><strong>Dataset Overview</strong><a class="anchor-link" href="#Dataset-Overview">¶</a></h3><p>The dataset contains <strong>1,534 rows</strong>, where each row represents a major power outage event. To answer the primary question and build a predictive model, the following columns are most relevant:</p>
@@ -7570,6 +7571,7 @@ a.anchor-link {
 <li><strong><code>ANOMALY.LEVEL</code></strong>: The Oceanic Niño Index (ONI) representing climate abnormalcy at the time.</li>
 <li><strong><code>CUSTOMERS.AFFECTED</code></strong>: The number of customers who lost power during the event.</li>
 </ul>
+<hr/>
 </div>
 </div>
 </div>
@@ -7580,7 +7582,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-2:-Data-Cleaning-and-Exploratory-Data-Analysis">Step 2: Data Cleaning and Exploratory Data Analysis<a class="anchor-link" href="#Step-2:-Data-Cleaning-and-Exploratory-Data-Analysis">¶</a></h2><h3 id="Data-Cleaning"><strong>Data Cleaning</strong><a class="anchor-link" href="#Data-Cleaning">¶</a></h3><p>To prepare the dataset for analysis and modeling, I performed several data cleaning steps to ensure consistency and accuracy:</p>
+<h2 id="Data-Cleaning-and-Exploratory-Data-Analysis"><strong>Data Cleaning and Exploratory Data Analysis</strong><a class="anchor-link" href="#Data-Cleaning-and-Exploratory-Data-Analysis">¶</a></h2><h3 id="--Data-Cleaning"><strong>- Data Cleaning</strong><a class="anchor-link" href="#--Data-Cleaning">¶</a></h3><p>To prepare the dataset for analysis and modeling, I performed several data cleaning steps to ensure consistency and accuracy:</p>
 <ul>
 <li><p><strong>Temporal Integration</strong>: I combined separate date and time columns (e.g., <code>OUTAGE.START.DATE</code> and <code>OUTAGE.START.TIME</code>) into single <code>pd.Timestamp</code> objects. This allows for precise calculation of <strong><code>OUTAGE.DURATION</code></strong>, which is the target variable for this project.</p>
 </li>
@@ -7721,7 +7723,8 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Exploratory-Data-Analysis-(EDA)"><strong>Exploratory Data Analysis (EDA)</strong><a class="anchor-link" href="#Exploratory-Data-Analysis-(EDA)">¶</a></h3><h3 id="1.-Distribution-of-Outage-Durations-(Fig-1)"><strong>1. Distribution of Outage Durations (Fig 1)</strong><a class="anchor-link" href="#1.-Distribution-of-Outage-Durations-(Fig-1)">¶</a></h3><ul>
+<hr/>
+<h3 id="--Exploratory-Data-Analysis-(EDA)"><strong>- Exploratory Data Analysis (EDA)</strong><a class="anchor-link" href="#--Exploratory-Data-Analysis-(EDA)">¶</a></h3><h3 id="1.-Distribution-of-Outage-Durations-(Fig-1)"><strong>1. Distribution of Outage Durations (Fig 1)</strong><a class="anchor-link" href="#1.-Distribution-of-Outage-Durations-(Fig-1)">¶</a></h3><ul>
 <li><strong>Observation</strong>: The distribution of <code>OUTAGE.DURATION</code> is heavily <strong>right-skewed</strong>.</li>
 <li><strong>Insight</strong>: While most outages are resolved relatively quickly, a small number of extreme events (outliers) last for a very long time. This indicates that the <strong>Median</strong> is a more robust measure of central tendency than the Mean for this specific dataset.</li>
 </ul>
@@ -7822,7 +7825,8 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-3:-Assessment-of-Missingness">Step 3: Assessment of Missingness<a class="anchor-link" href="#Step-3:-Assessment-of-Missingness">¶</a></h2><p>This section investigates the nature of missing data in the <code>OUTAGE.DURATION</code> column and applies an appropriate imputation strategy based on the findings.</p>
+<hr/>
+<h2 id="Assessment-of-Missingness"><strong>Assessment of Missingness</strong><a class="anchor-link" href="#Assessment-of-Missingness">¶</a></h2><p>This section investigates the nature of missing data in the <code>OUTAGE.DURATION</code> column and applies an appropriate imputation strategy based on the findings.</p>
 <h3 id="1.-Permutation-Test:-Dependency-on-Cause-Category"><strong>1. Permutation Test: Dependency on Cause Category</strong><a class="anchor-link" href="#1.-Permutation-Test:-Dependency-on-Cause-Category">¶</a></h3><p>To determine if the missingness is <strong>MAR</strong> or <strong>MCAR</strong>, this project tested the relationship between <code>OUTAGE.DURATION</code> missingness and <code>CAUSE.CATEGORY</code>.</p>
 <ul>
 <li><strong>Test Statistic</strong>: Total Variation Distance (TVD)</li>
@@ -7976,7 +7980,8 @@ P-value: 0.0000
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-4:-Hypothesis-Testing">Step 4: Hypothesis Testing<a class="anchor-link" href="#Step-4:-Hypothesis-Testing">¶</a></h2><p>This section performs a formal statistical test to determine if the presence of <strong>Severe Weather</strong> significantly impacts the restoration time of power outages compared to all other causes.</p>
+<hr/>
+<h2 id="Hypothesis-Testing"><strong>Hypothesis Testing</strong><a class="anchor-link" href="#Hypothesis-Testing">¶</a></h2><p>This section performs a formal statistical test to determine if the presence of <strong>Severe Weather</strong> significantly impacts the restoration time of power outages compared to all other causes.</p>
 <h3 id="1.-Research-Question"><strong>1. Research Question</strong><a class="anchor-link" href="#1.-Research-Question">¶</a></h3><p>Does the recovery time (<code>OUTAGE.DURATION</code>) for outages caused by <strong>Severe Weather</strong> differ significantly from the recovery time for outages caused by all other reasons?</p>
 <h3 id="2.-Hypotheses"><strong>2. Hypotheses</strong><a class="anchor-link" href="#2.-Hypotheses">¶</a></h3><ul>
 <li><strong>Null Hypothesis ($H_0$):</strong> The distribution of outage durations for <strong>Severe Weather</strong> is the same as the distribution for all other causes. Any observed difference is due to random chance.</li>
@@ -8111,7 +8116,8 @@ P-value: 0.0000
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-5:-Framing-a-Prediction-Problem">Step 5: Framing a Prediction Problem<a class="anchor-link" href="#Step-5:-Framing-a-Prediction-Problem">¶</a></h2><p>This project aims to build a predictive model that estimates the recovery time of major power outages based on initial event data.</p>
+<hr/>
+<h2 id="Framing-a-Prediction-Problem"><strong>Framing a Prediction Problem</strong><a class="anchor-link" href="#Framing-a-Prediction-Problem">¶</a></h2><p>This project aims to build a predictive model that estimates the recovery time of major power outages based on initial event data.</p>
 <h3 id="1.-Prediction-Task"><strong>1. Prediction Task</strong><a class="anchor-link" href="#1.-Prediction-Task">¶</a></h3><p>The goal is to predict the <strong>duration of a power outage</strong> (<code>OUTAGE.DURATION</code>) at the moment it is reported.</p>
 <h3 id="2.-Problem-Type"><strong>2. Problem Type</strong><a class="anchor-link" href="#2.-Problem-Type">¶</a></h3><p>Since the target variable is a continuous numerical value (minutes), this is a <strong>Regression</strong> problem.</p>
 <h3 id="3.-Features-and-Target-Variable"><strong>3. Features and Target Variable</strong><a class="anchor-link" href="#3.-Features-and-Target-Variable">¶</a></h3><ul>
@@ -8146,6 +8152,7 @@ P-value: 0.0000
 <ul>
 <li><strong>Reasoning</strong>: RMSE penalizes larger prediction errors more heavily than MAE. In the context of power grid management, failing to predict a long-term, high-impact outage is more critical than a slight error in a short-term outage. Therefore, RMSE is the more appropriate metric to ensure the model accounts for high-risk events.</li>
 </ul>
+<hr/>
 </div>
 </div>
 </div>
@@ -8156,7 +8163,7 @@ P-value: 0.0000
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-6:-Baseline-Model">Step 6: Baseline Model<a class="anchor-link" href="#Step-6:-Baseline-Model">¶</a></h2><p>In this stage, a <strong>Linear Regression</strong> model was established as a baseline to predict the power outage duration (<code>OUTAGE.DURATION</code>). To analyze the impact of extreme outliers on model performance, I compared the results of training the model on the <strong>Full Dataset</strong> versus a <strong>Filtered Dataset</strong> (excluding the top 10% outliers).</p>
+<h2 id="Baseline-Model"><strong>Baseline Model</strong><a class="anchor-link" href="#Baseline-Model">¶</a></h2><p>In this stage, a <strong>Linear Regression</strong> model was established as a baseline to predict the power outage duration (<code>OUTAGE.DURATION</code>). To analyze the impact of extreme outliers on model performance, I compared the results of training the model on the <strong>Full Dataset</strong> versus a <strong>Filtered Dataset</strong> (excluding the top 10% outliers).</p>
 <h3 id="1.-Model-Configuration"><strong>1. Model Configuration</strong><a class="anchor-link" href="#1.-Model-Configuration">¶</a></h3><ul>
 <li><strong>Algorithm</strong>: Linear Regression (Baseline)</li>
 <li><strong>Features Used</strong>:<ul>
@@ -8170,7 +8177,6 @@ P-value: 0.0000
 </ul>
 </li>
 </ul>
-<hr/>
 <h3 id="2.-Performance-Comparison:-Full-vs.-Filtered-Data"><strong>2. Performance Comparison: Full vs. Filtered Data</strong><a class="anchor-link" href="#2.-Performance-Comparison:-Full-vs.-Filtered-Data">¶</a></h3><p>The model was evaluated using <strong>RMSE (Root Mean Squared Error)</strong>. To measure the actual predictive power, the results were compared against a <strong>Naive Baseline</strong> (predicting the mean value of the training set).</p>
 <table>
 <thead>
@@ -8338,7 +8344,8 @@ Improvement over Mean: 16.84%
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-7:-Final-Model">Step 7: Final Model<a class="anchor-link" href="#Step-7:-Final-Model">¶</a></h2><p>In this final stage, I developed an optimized <strong>Random Forest Regressor</strong> to capture the non-linear relationships and complex interactions between features that the linear baseline model could not account for. To ensure the best performance, I employed <strong>GridSearchCV</strong> for hyperparameter tuning.</p>
+<hr/>
+<h2 id="Final-Model"><strong>Final Model</strong><a class="anchor-link" href="#Final-Model">¶</a></h2><p>In this final stage, I developed an optimized <strong>Random Forest Regressor</strong> to capture the non-linear relationships and complex interactions between features that the linear baseline model could not account for. To ensure the best performance, I employed <strong>GridSearchCV</strong> for hyperparameter tuning.</p>
 <h3 id="1.-Model-Configuration-&amp;-Hyperparameter-Tuning"><strong>1. Model Configuration &amp; Hyperparameter Tuning</strong><a class="anchor-link" href="#1.-Model-Configuration-&amp;-Hyperparameter-Tuning">¶</a></h3><ul>
 <li><strong>Algorithm</strong>: Random Forest Regressor</li>
 <li><strong>Tuning Method</strong>: GridSearchCV (3-fold Cross-Validation)</li>
@@ -8355,7 +8362,6 @@ Improvement over Mean: 16.84%
 </ul>
 </li>
 </ul>
-<hr/>
 <h3 id="2.-Final-Performance-Evaluation"><strong>2. Final Performance Evaluation</strong><a class="anchor-link" href="#2.-Final-Performance-Evaluation">¶</a></h3><p>The final model was tested on the same filtered dataset (90th percentile) to ensure a fair comparison with the baseline.</p>
 <table>
 <thead>
@@ -8381,7 +8387,6 @@ Improvement over Mean: 16.84%
 </tr>
 </tbody>
 </table>
-<hr/>
 <h3 id="3.-Analysis-and-Conclusion"><strong>3. Analysis and Conclusion</strong><a class="anchor-link" href="#3.-Analysis-and-Conclusion">¶</a></h3><ul>
 <li><strong>Performance Gain</strong>: The Final Model achieved a <strong>20.69% improvement</strong> over the naive mean prediction and a <strong>4.64% further reduction in RMSE</strong> compared to the Linear Baseline. This confirms that the Random Forest algorithm successfully captured non-linear patterns, such as the interaction between specific climate regions and cause categories.</li>
 <li><strong>Model Stability</strong>: By using a <code>max_depth</code> of 20 and <code>min_samples_split</code> of 10, the model maintains a balance between complexity and generalization, avoiding overfitting to specific noise in the outage data.</li>
@@ -8475,7 +8480,8 @@ Improvement over Baseline (Linear): 4.64%
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-8:-Fairness-Analysis">Step 8: Fairness Analysis<a class="anchor-link" href="#Step-8:-Fairness-Analysis">¶</a></h2><p>In this final step, I conducted a fairness analysis to determine if the model's performance significantly differs across different demographic groups. Specifically, I compared the prediction accuracy between <strong>Urban</strong> and <strong>Rural</strong> areas based on population density (<code>POPDEN_URBAN</code>).</p>
+<hr/>
+<h2 id="Fairness-Analysis"><strong>Fairness Analysis</strong><a class="anchor-link" href="#Fairness-Analysis">¶</a></h2><p>In this final step, I conducted a fairness analysis to determine if the model's performance significantly differs across different demographic groups. Specifically, I compared the prediction accuracy between <strong>Urban</strong> and <strong>Rural</strong> areas based on population density (<code>POPDEN_URBAN</code>).</p>
 <h3 id="1.-Methodology"><strong>1. Methodology</strong><a class="anchor-link" href="#1.-Methodology">¶</a></h3><ul>
 <li><strong>Group Definition</strong>: The dataset was split into two groups using the median of <code>POPDEN_URBAN</code>.<ul>
 <li><strong>Urban</strong>: Areas with population density above or equal to the median.</li>
@@ -8486,14 +8492,12 @@ Improvement over Baseline (Linear): 4.64%
 <li><strong>Parity Metric</strong>: RMSE Ratio ($RMSE_{Urban} / RMSE_{Rural}$). A ratio near 1.0 indicates parity (fairness).</li>
 <li><strong>Statistical Significance</strong>: A <strong>Permutation Test</strong> (500 iterations) was used to calculate the <strong>p-value</strong>, testing the null hypothesis that there is no significant difference in RMSE between the two groups.</li>
 </ul>
-<hr/>
 <h3 id="2.-Results"><strong>2. Results</strong><a class="anchor-link" href="#2.-Results">¶</a></h3><ul>
 <li><strong>Urban Group RMSE</strong>: 864.86 minutes</li>
 <li><strong>Rural Group RMSE</strong>: 979.64 minutes</li>
 <li><strong>Fairness Ratio (Urban/Rural)</strong>: <strong>0.8828</strong></li>
 <li><strong>P-value</strong>: <strong>0.0740</strong></li>
 </ul>
-<hr/>
 <h3 id="3.-Conclusion-&amp;-Interpretation"><strong>3. Conclusion &amp; Interpretation</strong><a class="anchor-link" href="#3.-Conclusion-&amp;-Interpretation">¶</a></h3><ul>
 <li><strong>Statistical Insignificance</strong>: The p-value of <strong>0.0740</strong> is greater than the standard significance level of <strong>0.05</strong>. This suggests that the observed difference in RMSE between Urban and Rural areas is <strong>not statistically significant</strong> and could likely be due to random chance.</li>
 <li><strong>Fairness Confirmed</strong>: The Fairness Ratio of <strong>0.8828</strong> falls well within the acceptable range (0.8 to 1.25). This indicates that the model is <strong>fair</strong> and does not systematically discriminate against any specific group based on their population density.</li>
