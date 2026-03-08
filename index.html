@@ -7561,6 +7561,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Introduction"><strong>Introduction</strong><a class="anchor-link" href="#Introduction">¶</a></h3><p>This project conducts an open-ended investigation into the <strong>Major Power Outages</strong> dataset, which contains records of significant power outages in the United States from 2000 to 2016. Understanding the causes and consequences of these outages is critical for improving infrastructure resilience and public safety.</p>
+   <iframe src="assets/fig2.html" width="100%" height="500px" frameborder="0"></iframe> 
 <p>The primary focus of this project is to analyze how different environmental and operational factors—particularly <strong>Severe Weather</strong>—impact the restoration speed and overall severity of these events.</p>
 <p><strong>Primary Question:</strong> &gt; "Do power outages caused by Severe Weather last longer on average than those caused by other reasons?"</p>
 <h3 id="Dataset-Overview"><strong>Dataset Overview</strong><a class="anchor-link" href="#Dataset-Overview">¶</a></h3><p>The dataset contains <strong>1,534 rows</strong>, where each row represents a major power outage event. To answer the primary question and build a predictive model, the following columns are most relevant:</p>
@@ -7727,6 +7728,7 @@ a.anchor-link {
 <h3 id="--Exploratory-Data-Analysis-(EDA)"><strong>- Exploratory Data Analysis (EDA)</strong><a class="anchor-link" href="#--Exploratory-Data-Analysis-(EDA)">¶</a></h3><h3 id="1.-Distribution-of-Outage-Durations-(Fig-1)"><strong>1. Distribution of Outage Durations (Fig 1)</strong><a class="anchor-link" href="#1.-Distribution-of-Outage-Durations-(Fig-1)">¶</a></h3><ul>
 <li><strong>Observation</strong>: The distribution of <code>OUTAGE.DURATION</code> is heavily <strong>right-skewed</strong>.</li>
 <li><strong>Insight</strong>: While most outages are resolved relatively quickly, a small number of extreme events (outliers) last for a very long time. This indicates that the <strong>Median</strong> is a more robust measure of central tendency than the Mean for this specific dataset.</li>
+    <iframe src="assets/fig1.html" width="100%" height="500px" frameborder="0"></iframe>
 </ul>
 <h3 id="2.-Most-Frequent-Causes-(Fig-2)"><strong>2. Most Frequent Causes (Fig 2)</strong><a class="anchor-link" href="#2.-Most-Frequent-Causes-(Fig-2)">¶</a></h3><ul>
 <li><strong>Observation</strong>: <strong>Severe Weather</strong> is identified as the leading cause of major power outages, with <strong>763 recorded events</strong>.</li>
